@@ -7,4 +7,4 @@ More in details, HA is achieved by creating the infrastructure in multi availabi
 
 ## Architecture
 
-![Web Application Multi AD Architecture](../images/ha-multi-ad.png)
+![Web Application Multi AD Architecture](../images/ha-multi-regions.png)

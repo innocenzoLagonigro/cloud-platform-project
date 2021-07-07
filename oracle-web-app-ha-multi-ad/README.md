@@ -8,4 +8,4 @@ As a consequence, this infrastructure can be exploited in a Disaster Recovery st
 
 ## Architecture
 
-![Web Application Multi Regions Architecture](../images/ha-multi-regions.png)
+![Web Application Multi Regions Architecture](../images/ha-multi-ad.png)
