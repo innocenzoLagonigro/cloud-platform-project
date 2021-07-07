@@ -1,4 +1,4 @@
-# Create internet gateway to allow public internet traffic
+/*# Create internet gateway to allow public internet traffic
 
 resource "oci_core_internet_gateway" "ig" {
   compartment_id = var.compartment_ocid
@@ -6,3 +6,4 @@ resource "oci_core_internet_gateway" "ig" {
   vcn_id         = oci_core_virtual_network.vcn.id
 }
 
+*/

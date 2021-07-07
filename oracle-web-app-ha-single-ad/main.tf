@@ -1,3 +1,13 @@
+#===============Provider Config===================
+terraform {
+  required_providers {
+    oci = {
+      source = "hashicorp/oci"
+      version = "4.33.0"
+    }
+  }
+}
+
 provider "oci" {
   tenancy_ocid         = var.tenancy_ocid
   user_ocid            = var.user_ocid
