@@ -13,7 +13,7 @@ resource "oci_database_autonomous_database" "ATPdatabase" {
   is_free_tier             = var.ATP_free_tier
   nsg_ids                  = var.ATP_private_endpoint ? [oci_core_network_security_group.ATPSecurityGroup.id] : null   
   private_endpoint_label   = var.ATP_private_endpoint ? var.ATP_private_endpoint_label : null
-  subnet_id                = var.ATP_private_endpoint ? oci_core_subnet.subnet_3.id : null   
+  subnet_id                = var.ATP_private_endpoint ? oci_core_subnet.subnet_db.id : null   
   is_data_guard_enabled    = var.ATP_data_guard_enabled
 }
 

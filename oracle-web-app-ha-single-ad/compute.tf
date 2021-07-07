@@ -44,7 +44,7 @@ resource "oci_core_instance" "compute_instance1" {
   }
 
   create_vnic_details {
-     subnet_id = oci_core_subnet.subnet_2.id
+     subnet_id = oci_core_subnet.subnet_web_app.id
      nsg_ids = [oci_core_network_security_group.WebSecurityGroup.id, oci_core_network_security_group.SSHSecurityGroup.id]
   }
 
@@ -92,7 +92,7 @@ resource "oci_core_instance_configuration" "instance_configuration" {
                 image_id = oci_core_image.flask_instance_image.id
             }
             create_vnic_details {
-                subnet_id = oci_core_subnet.subnet_2.id
+                subnet_id = oci_core_subnet.subnet_web_app.id
                 nsg_ids = [oci_core_network_security_group.WebSecurityGroup.id, oci_core_network_security_group.SSHSecurityGroup.id]
             }        
         }
@@ -106,7 +106,7 @@ resource "oci_core_instance_pool" "instance_pool" {
     instance_configuration_id = oci_core_instance_configuration.instance_configuration.id  
     placement_configurations {
         availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
-        primary_subnet_id = oci_core_subnet.subnet_2.id
+        primary_subnet_id = oci_core_subnet.subnet_web_app.id
     }
     size = "2"
     display_name = "Instance_Pool"

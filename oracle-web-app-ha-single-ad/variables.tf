@@ -51,6 +51,24 @@ variable "vcn_dns_label" {
   default = "haproject"
 }
 
+variable "lb_subnet_cidr" {
+  description = "The CIDR for the public subnet that will contain the load balancers"
+  type = string
+  default = "10.0.0.0/24"
+}
+
+variable "web_app_subnet_cidr" {
+  description = "The CIDR for the public subnet that will contain the web servers"
+  type = string
+  default = "10.0.1.0/24"
+}
+
+variable "db_subnet_cidr" {
+  description = "The CIDR for the public subnet that will contain the data tier"
+  type = string
+  default = "10.0.2.0/24"
+}
+
 variable "linux_os_version" {
   description = "Operating system version for all Linux instances"
   default     = "7.9"
