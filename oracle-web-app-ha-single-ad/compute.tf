@@ -1,6 +1,3 @@
-## Copyright © 2020, Oracle and/or its affiliates. 
-## All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
-
 # This Terraform script provisions a compute instance, instance configuration, instance pool and autoscaling config.
 
 data "template_file" "key_script" {
@@ -24,7 +21,6 @@ data "template_cloudinit_config" "cloud_init" {
 # Create Compute Instance
 
 resource "oci_core_instance" "compute_instance1" {
-#  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[var.availability_domain - 2]["name"]
   availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   #availability_domain = var.availablity_domain_name
   compartment_id      = var.compartment_ocid
@@ -134,9 +130,9 @@ resource "oci_autoscaling_auto_scaling_configuration" "autoscaling_configuration
     policies {
         display_name = "Threshold_AutoScaling_Configuration_Policies"
         capacity {
-            initial = "2"
-            max = "4"
-            min = "2"
+            initial = "1"
+            max = "5"
+            min = "1"
         }
         policy_type = "threshold"
         rules {

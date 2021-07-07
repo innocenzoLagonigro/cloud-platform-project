@@ -1,6 +1,3 @@
-## Copyright © 2020, Oracle and/or its affiliates. 
-## All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
-
 # Create route table to connect vcn to internet gateway
 
 resource "oci_core_route_table" "rt-pub" {

@@ -1,5 +1,4 @@
-## Copyright © 2020, Oracle and/or its affiliates. 
-## All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
+# This terraform script creates an autonomous database and the database wallet
 
 resource "oci_database_autonomous_database" "ATPdatabase" {
   admin_password           = var.ATP_password
