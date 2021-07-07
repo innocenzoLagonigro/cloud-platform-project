@@ -119,7 +119,7 @@ variable "ATP_database_data_storage_size_in_tbs" {
 }
 
 variable "ATP_database_db_name" {
-  default = "aTFdb"
+  default = "WebAppDB"
 }
 
 variable "ATP_database_db_version" {
@@ -131,7 +131,7 @@ variable "ATP_database_defined_tags_value" {
 }
 
 variable "ATP_database_display_name" {
-  default = "ATP"
+  default = "WebAppAutonomousDB"
 }
 
 variable "ATP_database_freeform_tags" {
@@ -149,7 +149,7 @@ variable "ATP_tde_wallet_zip_file" {
 }
 
 variable "ATP_private_endpoint_label" {
-  default = "ATPPrivateEndpoint"
+  default = "AutonomousDBPrivateEndpoint"
 }
 
 variable  "ATP_data_guard_enabled" {
