@@ -15,6 +15,7 @@ resource "oci_database_autonomous_database" "ATPdatabase" {
   private_endpoint_label   = var.ATP_private_endpoint ? var.ATP_private_endpoint_label : null
   subnet_id                = var.ATP_private_endpoint ? oci_core_subnet.subnet_db.id : null   
   is_data_guard_enabled    = var.ATP_data_guard_enabled
+  is_auto_scaling_enabled  = var.ATP_auto_scaling_enabled
 }
 
 resource "random_string" "wallet_password" {

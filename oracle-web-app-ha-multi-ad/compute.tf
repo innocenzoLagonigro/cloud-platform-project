@@ -108,6 +108,12 @@ resource "oci_core_instance_pool" "instance_pool" {
         availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
         primary_subnet_id = oci_core_subnet.subnet_web_app.id
     }
+
+    placement_configurations {
+        availability_domain = data.oci_identity_availability_domains.ads.availability_domains[1].name
+        primary_subnet_id = oci_core_subnet.subnet_web_app.id
+    }
+
     size = "2"
     display_name = "Instance_Pool"
     load_balancers {

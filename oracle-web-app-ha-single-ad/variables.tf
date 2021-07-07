@@ -154,6 +154,12 @@ variable "ATP_private_endpoint_label" {
 
 variable  "ATP_data_guard_enabled" {
   default = false 
+  type = bool
+}
+
+variable "ATP_auto_scaling_enabled" {
+  default = false 
+  type = bool
 }
 
 # Dictionary Locals
