@@ -65,3 +65,23 @@ lb_subnet_cidr = "<lb_subnet_cidr>"
 web_app_subnet_cidr = "<web_app_subnet_cidr>"
 db_subnet_cidr = "<db_subnet_cidr>"
 ```
+4. Create the Architecture
+
+Run the following commands inside the sub-directory:
+
+```
+terraform init
+terraform plan
+terraform apply
+```
+
+Confirm ```yes``` when prompted.
+
+5. Destroy the Architecture
+
+When you want to destroy the architecture since you no longer need it, run the following command:
+
+```
+terraform destroy
+```
+Confirm ```yes``` when prompted.
